@@ -1,6 +1,6 @@
 // Kevin Flanagan
-// Web App Part 4
-// VFW 1209
+// Web App Week 1
+// MIU 1210
 
 
 // Wait until the DOM is ready.
@@ -146,17 +146,18 @@ window.addEventListener("DOMContentLoaded", function() {
 		imageLi.appendChild(newImg);
 	} // End getImage Function
 
+	
 	// Auto Populate Locale Storage
 	// autoFillData Function
 	function autoFillData() {
 		// The actual JSON Object data required for this to work is coming from our JSON.js file, which is loaded from our HTML page.
 		// Store the JSON Object into Local Storage.
-		for(var n in JSON) {
+		for(var n in json) {
 			var id = Math.floor(Math.random()*1000001);
-			localStorage.setItem(id, JSON.stringify(JSON[n]));
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	} // End autoFillData Function
-
+ 
 
 	// Make Item Function
 	function makeItemLinks (key, linksLi) {
@@ -314,7 +315,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 	// Variable Defaults
-	var contactGroups = ["--Choose A Group--", "ATV", "Dirt Bike", "Watercraft", "Street Bike", "Cruiser", "Scooter"],
+	var contactGroups = ["--Choose A Group--", "ATV", "Dirtbike", "Streetbike", "Cruiser", "Scooter"],
 		crateValue,
 		floorValue = "No",
 		errMsg = $('errors');
